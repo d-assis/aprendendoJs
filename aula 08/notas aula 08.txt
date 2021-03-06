@@ -1,0 +1,16 @@
+notas aula 08
+
+ordem de precedência entre diferentes operadores
+
+	aritiméticos > relacionais > lógicos
+
+ordem de precedência entre operadores lógicos
+
+	! > && > ||
+
+operadores ternários (?:)
+	tem como parâmetros um teste lógico, antes do "?" e duas linhas de ação a serem executadas dependendo do resultado do teste
+	exemplo: 
+		var x = 18 == 20 ? 'pode crer' : 'ki mintira'
+		x receberá 'pode crer' caso 18 == 20 seja true (spoiler, não é), ou 'ki mintira' caso 18 == 20 seja false
+

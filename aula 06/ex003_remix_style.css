@@ -1,0 +1,15 @@
+/* definindo cor de fundo e cor de texto para o corpo da página*/
+body{
+    background-color: cornflowerblue;
+    color: cornsilk;
+}
+
+/* especificando famílias e tamanho de fonte para headers de prioridade 1 e parágrafos */
+h1{
+    font-family: 'Imbue', serif; 
+    font-size: 48pt;
+}
+p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24pt;
+}

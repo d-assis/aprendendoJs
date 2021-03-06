@@ -1,0 +1,118 @@
+Módulo A
+	aula 1
+		desativar Js via dev tools
+			- abrir dev tools (f12)
+			- clicar nos 3 pontinhos
+			- more tools > settings > debugger > disable Javascript
+	aula 2
+		sdk == software development kit
+		node Js == tecnologia desenvolvida para possibilitar o uso de javascript fora dos navegadores
+	aula 3
+		links de referência
+			mozilla
+				https://developer.mozilla.org/pt-BR/docs/Web/JavaScript
+			ecma
+				https://www.ecma-international.org/publications/standards/Standard.htm
+		
+Módulo B
+	aula 6
+		concatenação 
+			em Js é possível concatenar diferentes tipos de dados e mostrá-los na tela por meio de certos comandos. Para concatenar, 
+			é feito o uso de '+' entre os dados concatenados, mas cuidado, '+' entre dois números não exerce a função de 
+			concatenação, e sim de soma.
+			alguns exemplos:
+				como sinal de concatenação entre string e números
+				<script>
+					var n1 = 10
+					window.alert('estou estudando a ' + n1 + ' dias')
+				</script>
+				resultado: estou estudando a 10 dias
+
+				como operador de soma
+				<script>
+					var n1 = 20
+					var n2 = 30
+
+					window.alert(n1 + n2)
+				</script>
+				resultado: 50
+		
+		template strings
+			Como uma alternativa mais simples à concatenação, é possível usar "placeholders" para delimitar espaços para variáveis 
+			dentro das strings. Basta declarar a string usando cráses (`seu texto aqui`), e usar, dentro da string delimitada, 
+			o código ${var}.
+			exemplo:
+			<script>
+				var idade = 25
+				var nome = 'Gabriel'
+
+				window.alert(`Olá, me chamo ${nome} e tenho ${idade} anos`)
+			</script>
+			resultado: Olá, me chamo Gabriel e tenho 25 anos
+
+		conversões de dados
+			numero > string:
+				- n.toString()
+					recebe o valor numérico antes da função, convertendo-o para uma cadeia de caracteres
+				- String(n)
+					recebe o valor numérico como parâmetro da função, convertendo-o para uma cadeia de caracteres
+			String > numero
+				- Number.parseInt(n)
+					recebe como parâmetro uma string composta de caracteres numéricos e retorna o valor correspondente como número inteiro
+				- Number.parseFloat(n)
+					recebe como parâmetro uma string composta de caracteres numéricos e retorna o valor correspondente como número real
+				- Number(n)
+					recebe como parâmetro uma string composta de caracteres numéricos e retorna o valor correspondente como número 
+					real ou inteiro, sempre a cargo da máquina
+
+		Comandos de formatação
+			formatando strings
+				s.length
+					observa quantos caracteres uma string (s) tem
+				s.toUpperCase()
+					formata todos os caracteres de uma string (s) para caixa-alta
+				s.toLowerCase
+					formata todos os caracteres de uma string (s) para caixa-baixa
+			formatando números
+				n.toFixed(p)
+					formata o número (n) limitando suas casas decimais para o número informado no parâmetro (p)
+				n.toFixed(p).replace('.' , ',')
+					formata o número (n) limitando suas casas decimais para o número informado no parâmetro (p)
+					e em seguida substitui o '.' por ',' na grafia do número (n)
+				n.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+					comando complexo que formata a grafia de um número para o padrão de grafia monetária do local e moeda informados
+					nos parâmetros
+
+Módulo C
+	aula 9
+		DOM
+		árvore DOM
+		métodos de seleção
+			getElementsBy...
+				TagName
+					procura e seleciona os elementos da árvore DOM que possuam a Tag HTML especificada. Para selecionar um único elemento entre vários outros com a mesma Tag, é necessário informar sua posição no array daquele tipo de tag. 
+					Ex.: document.getElementsByTagName('div')[0] //selecionando o primeiro elemento do documento com a tag <div>
+				ID
+					procura e seleciona um elemento da árvore DOM que possua o atributo 'ID' especificado. 
+					Ex.: document.getElementByID('idade') // selecionando o elemento HTML que possua o ID 'idade'
+				Name
+					procura e seleciona todos os elementos da árvore DOM que possuam o atributo 'name' especificado. 
+					Ex.: document.getElementsByName('cabeça') // seleciona todos os elementos com name='cabeça'
+					Para selecionar um único elemento entre vários outros com o mesmo name é necessário informar sua posição no array dos elementos com aquele name
+					Ex.: document.getElementsByName('cabeça')[0] //selecionando o primeiro elemento do documento com o name='cabeça'
+				ClassName
+					procura e seleciona todos os elementos da árvore DOM que possuam o atributo 'clss' especificado. 
+					Ex.: document.getElementsByClassName('botao') // seleciona todos os elementos com clss='botao'
+					Para selecionar um único elemento entre vários outros com a mesma class é necessário informar sua posição no array dos elementos com aquela class
+					Ex.: document.getElementsByClassName('botao')[0] //selecionando o primeiro elemento do documento com o class='botao'
+			querySelector
+				busca e seleciona um ou mais elementos com os seletores css especificados, no caso de mais de um seletor, os mesmos devem ser separados por vírgula. 
+				Fique sempre atento, o comando querySelector utiliza em seus parâmetros strings que sigam a sintaxe CSS
+				Ex.: document.querySelector('#idade') // seleciona elemento com o ID 'idade'
+					document.querySelector('p','div') // seleciona todos os elementos <p> e <div> do documento
+					document.querySelector('.botao') // seleciona todos os elementos com class='botao'
+
+	aula 10
+Módulo D
+Módulo E
+Módulo F

@@ -1,0 +1,3 @@
+harris-benedict
+
+((pesoKG * 10) + (alturaCM * 6,25) - (idade * 5)) + 5

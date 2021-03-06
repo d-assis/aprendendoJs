@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+    <head>
+        <meta charset="UTF-8">
+        <link rel='stylesheet' href='ex007.css'>
+        <title>Somando números</title>
+    </head>
+    <body>
+        <h1>Somando Valores</h1>
+        
+        <!-- criando campos de input e botão -->
+        <input type="number" name="txtn1" id="txtn1"> +
+        
+        <input type="number" name="txtn2" id="txtn2">
+        <!-- adicionando evento à criação do botão somar, ao ser clicado, deve chamar a função 'soma()' -->
+        <input type="button" value="somar" onclick="soma()">
+
+        <div id="res">Resultado</div>
+
+        <script>
+            //declarando a função soma, chamada ao clicar no botão 'somar'
+            function soma(){
+
+                // vinculando os campos de input numérico às variáveis tn1 e tn2. 
+                var tn1 = document.querySelector('#txtn1')
+                var tn2 = document.querySelector('#txtn2')
+                
+                // vinculando a <div> de ID 'res' à variável res
+                var res = document.querySelector('#res')
+                
+                // tratando os valores coletados através dos campos de input e armazenando o resultado do tratamento nas variáveis n1 e n2
+                var n1 = Number(tn1.value)
+                var n2 = Number(tn2.value)
+                
+                //declarando a variável s
+                var s = n1 + n2
+
+                /* mudando o conteúdo HTML do elemento <div> de ID 'res', previamente vinculado à variável res.
+                A mudança de conteúdo é feita através da navegação pela propriedade 'innerHTML' referente à variável res (que corresponde a um objeto do tipo HTML node)
+                No caso, usamos o operador de atribuição '=' para preencher o valor da propriedade 'innerHTML' com o conteúdo desejado
+                */
+                res.innerHTML = `A soma entre ${n1} e ${n2} é: <strong>${s}</strong>`
+            }
+
+        </script>
+    </body>
+</html>

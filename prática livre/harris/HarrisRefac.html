@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='harris.css' rel='stylesheet'>
+    <title>Harris-fit</title>
+</head>
+<body>
+    <h1>
+        Descubra seu gasto calórico diário!
+    </h1>
+    <p>
+        Seja bem-vinde ao <strong>Harris-fit</strong>, onde vc pode descobrir quantas calorias são necessárias para manter seu peso atual
+    </p>
+    <p>
+        Sabendo sua taxa metabólica é possível gerenciar melhor a ingestão de calorias e controle de peso!
+    </p>
+    
+    <!-- criando campos de coleta de dados do formulário-->
+    <div>Idade</div>
+    <input type="number" id="idade">
+    
+    <div>Altura</div>
+    <input type="number" id="altura"> <strong>cm</strong>
+
+    <div>Peso</div>
+    <input type="number" id='peso'> <strong>kg</strong>
+    
+    <div>Sexo</div>
+    <select id='sexo'>
+        <option>masculino</option>
+        <option>feminino</option>
+    </select>
+        
+    <div>Nível de atividade física</div>
+    <select id='atividade'>
+        <option>nula</option>
+        <option>leve</option>
+        <option>moderada</option>
+        <option>alta</option>
+        <option>mais alta</option>
+    </select>
+
+    <!-- criando botão e relacionando a função de cálculo ao evento de clique no botão -->
+    <input type="button" id="run" value="Calcular" onclick="harris()">
+
+    <!-- abrindo div para a exibição do resultado do cálculo -->
+    <p id='resultado'></p>
+
+    <script>
+        // declarando a função de cálculo da formula de harris benedict
+        function harris(){  
+
+            // armazenando os dados coletados nos campos em suas respectivas variáveis
+            var idade = Number(document.querySelector('#idade').value)
+            var altura = Number(document.querySelector('#altura').value)
+            var peso = Number(document.querySelector('#peso').value)
+            var sexo = document.querySelector('#sexo').value
+            var atividade = document.querySelector('#atividade').value
+
+            // declarando a variável 'fatorA' que deverá fazer a correspondência entre nível de atividade e o fator numérico associado à fórmula
+            var fatorA = 0
+
+            // trabalhando a correspondência entre valores e níveis de atividade física através da estrutura condicional 'switch case'
+            switch (atividade){
+                case 'nula': fatorA = 1.2
+                break;
+
+                case 'leve': fatorA = 1.375
+                break;
+
+                case 'moderada': fatorA = 1.55
+                break;
+
+                case 'alta': fatorA = 1.725
+                break;
+
+                case 'mais alta': fatorA = 1.9
+                break;
+            }
+            
+            /* 
+                declarando e definindo a variável 'fatorS' usando o operador ternário
+                a expressão abaixo define o valor de fatorS baseado em 1 de 2 opções presentes no formulário
+                caso o sexo informado seja 'masculino' a variável recebe o valor 5, caso contrário recebe -161
+            */
+            var fatorS = sexo == 'masculino'? 5 : -161
+
+            // agregando todas as variáveis na fórmula de cálculo e armazenando o resultado na variável 'Tkcal'
+            var Tkcal = (((peso * 10)+ (altura * 6.25) - (idade * 5)) + fatorS) * fatorA
+            
+            // escrevendo a mensagem na div reservada para tal
+            document.getElementById('resultado').innerHTML = `Você deve consumir ${Tkcal.toFixed(2)}Kcal para manter seu peso atual <br>`
+        }
+    </script>
+</body>
+</html>

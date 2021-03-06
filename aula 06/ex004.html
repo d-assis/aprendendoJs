@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+        }
+        h1{
+            color: burlywood;
+            font-family: Fantasy;
+            font-size: 25pt;
+        }
+        p{
+            color: cornsilk;
+            font-family: Arial;
+            font-size: 14pt;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Exercício Número 4
+    </h1>
+    <p>
+        trabalhando com formatação de strings
+    </p>
+    <script>
+        var nome = prompt('Qual é o seu nome?')
+        document.writeln(`<p>Olá, <strong>${nome}</strong>! Seu nome tem ${nome.length} letras </p>`)
+        document.writeln(`<p> Seu nome em maiúsculas ficaria ${nome.toUpperCase()}</p>`)
+        document.writeln(`<p> Seu nome em minúsculas ficaria ${nome.toLowerCase()}</p>`)
+    </script>
+</body>
+</html>

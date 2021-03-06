@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meu primeiro programa</title>
+    <style>
+        body{
+            background-color: rgb(124, 95, 95);
+            color: cornsilk;
+            font: normal 20pt fantasy;
+        }
+        h1{
+            color: rgb(157, 167, 177);
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Já me livrei da maldição! \o/</p>
+    <script>
+        var nome = window.prompt('qual é o seu nome?')
+        alert('olá ' + nome + ', prazer em conhecê-lo!') // concatenação em js é feita com o sinal +
+
+        var n1 = prompt(nome + ' por favor, digite um número')
+        n1 = Number(n1) // conversão de string pra número, use parseInt ou parseFloat para converter para tipos específicos de número
+        var n2 = prompt(nome + ' por favor, digite outro número')
+        n2 = Number(n2)
+
+        var s = n1 + n2
+
+        alert(`a soma entre ${n1} e ${n2} é ${s}`)
+        // (+) entre números faz soma
+        // (+) entre strings faz concatenação
+    </script>
+</body>
+</html>

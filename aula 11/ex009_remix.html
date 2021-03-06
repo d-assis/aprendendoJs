@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="ex009_remix.css">
+        <title>Nacionalidade versão HTML</title>
+    </head>
+    <body>
+        <h1>Estrangeiro ou Brasileiro?</h1>
+        <div>Você vem de que país? </div>
+        <input type='text' id='nac'>
+        <input type="button" value="verificar" onclick="run()">
+        <div>Então é: <p id="res"></p></div>
+
+        <script>
+            function run(){
+                var nacional = document.querySelector('#nac').value
+
+                if(nacional == 'Brasil' || nacional == 'brasil' || nacional == 'brazil' || nacional == 'Brazil'){
+                    document.querySelector('#res').innerHTML = 'um <strong>Brasileiro</strong>'
+                }
+                else{
+                    document.querySelector('#res').innerHTML = 'um <strong>Estrangeiro</strong>'
+                }
+            }
+        </script>
+    </body>
+</html>

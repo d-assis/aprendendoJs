@@ -1,0 +1,18 @@
+body{
+    background-color:cornflowerblue;
+    font: normal 12pt montserrat;
+    color:cornsilk; 
+}
+h1{
+    font: normal 32pt cuprum;
+    color:cornsilk; 
+}
+p{
+    font: normal 18pt montserrat;
+    color:cornsilk; 
+}
+div{
+    margin-top: 20px;
+    font: normal 12pt montserrat;
+    color:cornsilk; 
+}

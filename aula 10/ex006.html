@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Eventos DOM</title>
+        <link rel="stylesheet" href="ex006.css">
+
+    </head>
+    <body>
+        <!-- chamando a função 'clicar' quando evento onclick for disparado nesse elemento *versão HTML-->
+        <div id='area' onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+            Interaja...
+        </div>
+        <script>
+            /* 
+                alternativa Js para os atibutos de evento HTML
+                
+                a.addEventListener('click', clicar)
+                a.addEventListener('mouseenter', entrar)
+                a.addEventListener('mouseout', sair)
+            */
+
+             // selecionando o elemento com ID 'area' e armazenando na variável 'a'
+             var a = window.document.getElementById('area')
+
+            // declarando a função 'clicar'
+             function clicar(){
+                // muda a cor de fundo do elemento com ID 'area'
+                a.style.backgroundColor = 'royalblue'
+                /*
+                    outro jeito de obter o mesmo resultado 
+                    document.querySelector('#area').style.backgroundColor = 'royalblue'
+                */
+                
+                // muda o conteúdo HTML do elemento com ID 'area'
+                a.innerHTML = '<strong>CLICOU!!!</strong>'
+                /*
+                    outro jeito de obter o mesmo resultado 
+                    document.querySelector('#area').innerHTML = '<strong>CLICOU!!!</strong>'
+                */
+            }
+
+            // declarando a função 'entrar'
+            function entrar(){
+                a.innerHTML = '<strong>ENTROU</strong> :D'
+            }
+
+            // declarando a função 'sair'
+            function sair(){
+                a.innerHTML = '<i>saiu</i>... :('
+                a.style.backgroundColor = 'rgb(52, 104, 69)'
+            }
+        </script>
+    </body>
+</html>

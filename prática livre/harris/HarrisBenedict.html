@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='harris.css' rel='stylesheet'>
+    <title>Harris-fit</title>
+</head>
+<body>
+    <h1>
+        Descubra seu gasto calórico diário!
+    </h1>
+    <p>
+        Seja bem-vinde ao <strong>Harris-fit</strong>, onde vc pode descobrir quantas calorias são necessárias para manter seu peso atual
+    </p>
+    <p>
+        Sabendo sua taxa metabólica é possível gerenciar melhor a ingestão de calorias e controle de peso!
+    </p>
+    
+    <div>Idade</div>
+    <input type="number" id="idade">
+    
+    <div>Altura</div>
+    <input type="number" id="altura"> <strong>cm</strong>
+
+    <div>Peso</div>
+    <input type="number" id='peso'> <strong>kg</strong>
+    
+    <div>Sexo</div>
+    <!--<input type="text" id='sexo'>-->
+    <select id='sexo'>
+        <option>masculino</option>
+        <option>feminino</option>
+    </select>
+        
+    <div>Nível de atividade física</div>
+    <!--<input type="text" id='atividade'>-->
+    <select id='atividade'>
+        <option>nula</option>
+        <option>leve</option>
+        <option>moderada</option>
+        <option>alta</option>
+        <option>mais alta</option>
+    </select>
+
+    <input type="button" id="run" value="Calcular" onclick="harris()">
+
+    
+    <p id='resultado'></p>
+
+    <script>
+        function harris(){  
+
+            var idade = Number(document.querySelector('#idade').value)
+            var altura = Number(document.querySelector('#altura').value)
+            var peso = Number(document.querySelector('#peso').value)
+            var sexo = document.querySelector('#sexo').value
+            var atividade = document.querySelector('#atividade').value
+            
+           /* if(sexo == "masculino"){
+                var basal = ((peso * 10)+ (altura * 6.25) - (idade * 5)) + 5
+            }
+            else{
+                var basal = ((peso * 10)+ (altura * 6.25) - (idade * 5)) - 161
+            }
+            */
+
+            var fatorA = 0
+
+            switch (atividade){
+                case 'nula': fatorA = 1.2
+                break;
+
+                case 'leve': fatorA = 1.375
+                break;
+
+                case 'moderada': fatorA = 1.55
+                break;
+
+                case 'alta': fatorA = 1.725
+                break;
+
+                case 'mais alta': fatorA = 1.9
+                break;
+            }
+            
+            var fatorS = sexo == 'masculino'? 5 : -161
+
+            var Tkcal = (((peso * 10)+ (altura * 6.25) - (idade * 5)) + fatorS) * fatorA
+            /*
+            if(atividade == "nula"){
+                var Tkcal = basal * 1.2
+            }
+            else{
+                if(atividade == "leve"){
+                    var Tkcal = basal * 1.375
+                }
+                else{
+                    if(atividade == "moderada"){
+                        var Tkcal = basal * 1.55
+                    }
+                    else{
+                        if(atividade == "alta"){
+                            var Tkcal = basal * 1.725
+                        }
+                        else{
+                            var Tkcal = basal * 1.9
+                        }
+                    }
+                }
+            }
+            */
+            
+            document.getElementById('resultado').innerHTML = `Você deve consumir ${Tkcal.toFixed(2)}Kcal para manter seu peso atual <br>`
+        }
+    </script>
+</body>
+</html>

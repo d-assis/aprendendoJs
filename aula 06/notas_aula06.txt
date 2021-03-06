@@ -1,0 +1,10 @@
+notas (aula 06)
+
+n1.toFixed(2)
+	usado para definir um número fixo de casas decimais para um número real
+
+n1.toFixed(2).replace('.',',')
+	usado para trocar o divisor de casa decimal, de ponto para vírgula
+
+n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+	usado para definir a grafia de um número no estilo da moeda de um determinado lugar (nesse caso Reais brasileiros)

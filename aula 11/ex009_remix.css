@@ -1,0 +1,17 @@
+body{
+    background-color: cornflowerblue;
+    color:cornsilk;
+    font: normal 14pt Arial;
+}
+
+h1{
+    font: large 28pt Arial;
+}
+div{
+    font: normal 18pt Arial;
+    margin-top: 20px;
+}
+
+p{
+    font: normal 18pt Arial;
+}

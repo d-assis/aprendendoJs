@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+    <head>
+        <meta charset='UTF-8'>
+        <link rel='stylesheet' href='ex010.css'>
+        <title>Estudando condicionais</title>
+    </head>
+    <body>
+        <h1>Sistema de multas</h1>
+        <div>Velocidade do carro</div>
+        <input type="number" name='txtvel' id='txtvel'> km/h
+        <input type="button" value="Verificar" id="btn1" onclick="calcular()">
+        <div id="res"></div>
+
+        <script>
+            function calcular(){
+               // estabelecendo conexão entre a variável res e a div 'res'
+                var res = document.querySelector('#res')
+               
+                // armazenando o conteúdo do campo input com ID 'txtvel' na variável txtv
+                var txtv = document.querySelector('#txtvel').value
+
+                // transformando o valor armazenado em txtv para número e armazenando o resultado na variável vel
+                var vel = Number(txtv)
+
+                res.innerHTML = `<p>Sua velocidade é de <strong>${vel}km/h</strong> </p>`
+                
+                // estabelecendo a condicional composta, se vel for maior que 60 uma mensagem de multa será inserida na div de ID 'res'
+                if(vel > 60){
+                    res.innerHTML += '<p>Você ultrapassou o limite de velocidade permitido e será multado.</p>'
+                }
+                // caso contrário outra mensagem, sem menção de multa, será inserida na mesma div
+                else{
+                    res.innerHTML += '<p>Você está dentro do limite de velocidade permitido.</p>'
+                }
+                
+                res.innerHTML += '<p>Sempre viaje usando cinto de segurança!</p>'
+            }
+        </script>
+    </body>
+</html>

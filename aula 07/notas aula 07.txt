@@ -1,0 +1,14 @@
+notas aula 07
+
+atalhos para incremento ou decremento
+	note que para qualquer uma das expressões abaixo, o valor da variável é alterado, não se trata de uma
+	 operação aritimética apenas, estamos atribuindo novo valor às variáveis
+
+original: 
+	x = x + 1
+	y = y - 1
+atalhos
+	x += 1
+	x++
+	y -= 1
+	y--

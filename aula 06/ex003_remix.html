@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+<head>
+    <!--especificando conjunto de caracteres-->
+    <meta charset = 'UTF-8'>
+    
+    <!--criando título da página, visível na aba do browser-->
+    <title> exercício 3 remix</title>
+    <!--referenciando arquivo externo de folhas de estilo CSS-->
+    <link href='ex003_remix_style.css' rel=stylesheet>
+    <!--referenciando fontes pré-selecionadas no google fonts, ao abrir a página o site sempre fara download dessas fontes caso já não existam na máquina-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Imbue:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+    <!--criando header de "prioridade 1"-->
+    <h1>Isso é um teste</h1>
+    
+    <!--criando parágrafo genérico-->
+    <p>
+        estou exercitando HTML, CSS e JS
+    </p>
+
+    <!--Adicionando script Js à página, atenção ao posicionamento, sempre colocar no final da tag body-->
+    <script>
+        //coletando valores numéricos inteiros a partir do retorno da função prompt
+        /*tratando os dados usando a função parseInt, que recebe como parâmetro um valor do tipo string
+          e devolve um valor correspondente do tipo number, no caso um número inteiro
+
+          também pode ser usada a função Number(n) que funciona de maneira similar, porém deixando a cargo da máquina
+           a conversão para número inteiro ou real
+        */
+        var n1 = Number.parseInt(prompt('digite um número'))
+        var n2 = Number.parseInt(prompt('digite outro número'))
+
+        var soma = n1 + n2 // usando '+' como operador de soma entre números
+
+        // usando + como sinal de concatenação entre números e strings
+        alert(`a soma de ${n1} e ${n2} é igual a ${soma}`)
+    </script>
+</body>
+</html>

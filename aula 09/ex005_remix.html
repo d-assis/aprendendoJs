@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>explorando o DOM</title>
+        <style>
+            body{
+                background-color: cornflowerblue;
+                color: cornsilk;
+            }
+            h1{
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size: 32pt;
+            }
+            p{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 14pt;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Estudando DOM</h1>
+        <p>Aqui vai o resultado</p>
+        <p>Aprendendo <strong>DOM</strong> em Javascript</p>
+        <div id='msg'>Clique em mim</div>
+        <script>
+            var d = window.document.getElementById('msg')
+            
+            var corpo = window.document.body;
+        
+            // navegando pelos elementos da árvore DOM, usamos o método 'getElementsByTagName' com 'p'[0], ou seja, primeiro parágrafo do documento, como parâmetro e então atribuímos o retorno dessa função, o objeto 'p'[0], a uma variável p1            
+            var p1 = window.document.getElementsByTagName('p')[0];
+            
+            window.document.writeln('o texto do primeiro parágrafo é: ' + p1.InnerText + '<br>');
+            
+            document.writeln('o tipo da váriável p1 é: ' + typeof p1 + '<br>');
+
+            corpo.style.backgroundColor = 'gray'
+
+            p1.style.color = 'brown'
+
+            d.style.backgroundColor = 'black'
+
+            window.document.getElementsByTagName('p')[1].innerHTML = 'testando o acesso ao <strong>DOM</strong>'
+
+            
+
+        </script>
+    </body>
+</html>

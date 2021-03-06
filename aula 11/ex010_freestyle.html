@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+    <head>
+        <meta charset='UTF-8'>
+        <link rel='stylesheet' href='ex010.css'>
+        <title>Estudando condicionais</title>
+    </head>
+    <body>
+        <h1>Sistema de multas</h1>
+        <div>Velocidade do carro</div>
+        <input type="number" name='txtvel' id='txtvel'> km/h
+        <input type="button" value="Verificar" id="btn1" onclick="multar()">
+        <div id="aviso"></div>
+        <div>Sempre viaje usando cinto de segurança!</div>
+
+        <script>
+
+            
+            function multar(){
+                
+                var vel = Number(document.querySelector('#txtvel').value)
+
+                console.log(vel)
+                
+                if(vel > 60){
+                    document.querySelector('#aviso').innerHTML = 'Você ultrapassou o limite de velocidade permitido e será multado.'
+                }
+                else{
+                    document.querySelector('#aviso').innerHTML = 'Você está dentro do limite de velocidade permitido.'
+                }
+
+
+            }
+        </script>
+    </body>
+</html>

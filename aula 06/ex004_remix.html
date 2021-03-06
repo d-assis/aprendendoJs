@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+    <head>
+        <meta charset='UTF-8'>
+        
+        <link href='ex004_remix_style.css' rel=stylesheet>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        
+        <link href="https://fonts.googleapis.com/css2?family=Imbue:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+        
+        <title>exercício 4 remix</title>
+
+    </head>
+    <body>
+        <h1>
+            Mais um exercício
+        </h1>
+        <p>
+            colocando em prática a <strong>coleta e manipulação de dados</strong> usando Js
+        </p>
+        <script>
+            var nome = prompt('Olá! Qual é o seu nome?')
+
+            document.write(`Olá, <strong>${nome}</strong>! Seu nome tem ${nome.length} letras; <br>`)
+            document.write(`em caixa alta seu nome ficaria ${nome.toUpperCase()}; <br>`)
+            document.write(`em caixa baixa seu nome ficaria ${nome.toLowerCase()};`)
+        </script>
+    </body>
+</html>
