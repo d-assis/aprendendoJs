@@ -17,7 +17,13 @@ function search(){
         */
         var fsex = document.getElementsByName('radsex')
         var idade = ano - fAno
-        var foto = document.querySelector('#foto')
+        /*
+            a função createElement('tipo de tag') cria em tempo real um novo elemento HTML na página, porém, sem especificar a localização desse elemento, o mesmo permanece invisível
+        */
+        var foto = document.createElement('img')
+
+        // a função setAttribute('nome do atributo', 'valor do atributo') cria e adiciona um novo atributo a um elemento específico, nesse caso o objeto foto
+        foto.setAttribute('id', 'foto')
 
         
         if(fsex[0].checked){
@@ -25,13 +31,13 @@ function search(){
             res.innerHTML = `Detectamos um homem com ${idade} anos`
 
             if(idade >= 0 && idade < 13){
-                foto.src = 'bebeM.png'
+                foto.setAttribute('src', 'bebeM.png')
             } else if(idade >= 13 && idade < 25){
-                foto.src = 'jovemM.png'
+                foto.setAttribute('src', 'jovemM.png')
             } else if(idade >= 25 && idade < 60){
-                foto.src = 'adultoM.png'
+                foto.setAttribute('src', 'adultoM.png')
             } else{
-                foto.src = 'idosoM.png'
+                foto.setAttribute('src', 'idosoM.png')
             }
         }
         else{
@@ -39,14 +45,21 @@ function search(){
             res.innerHTML = `Detectamos uma mulher com ${idade} anos`
 
             if(idade >= 0 && idade < 13){
-                foto.src = 'bebeF.png'
+                foto.setAttribute('src', 'bebeF.png')
             } else if(idade >= 13 && idade < 25){
-                foto.src = 'jovemF.png'
+                foto.setAttribute('src', 'jovemF.png')
             } else if(idade >= 25 && idade < 60){
-                foto.src = 'adultoF.png'
+                foto.setAttribute('src', 'adultoF.png')
             } else{
-                foto.src = 'idosoF.png'
+                foto.setAttribute('src', 'idosoF.png')
             }
+
         }
+
+        /* 
+            aqui especificamos a localização do objeto foto que deve ser posicionado dentro de res, que por sua vez é um objeto HTML do tipo <div>. 
+            isso é feito através do método appendChild('elemento')
+        */
+        res.appendChild(foto)
     }
 }
