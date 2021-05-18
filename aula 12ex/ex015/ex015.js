@@ -18,7 +18,7 @@ function search(){
         var fsex = document.getElementsByName('radsex')
         var idade = ano - fAno
         /*
-            a função createElement('tipo de tag') cria em tempo real um novo elemento HTML na página, porém, sem especificar a localização desse elemento, o mesmo permanece invisível
+            a função createElement('tipo de tag') cria em tempo real um novo elemento HTML na página, porém, sem especificar a localização ou atributos desse elemento, o mesmo permanece invisível
         */
         var foto = document.createElement('img')
 

@@ -115,4 +115,12 @@ Módulo C
 	aula 10
 Módulo D
 Módulo E
+	aula 13
+		repetições
+			consiste em uma estrutura de controle que, através de uma checagem lógica, perpetua ou encerra um ciclo de execução de comandos.
+
+		tipos de repetições
+			while (teste no início)
+			do while (teste no final)
+			for (expressão condensada)
 Módulo F
