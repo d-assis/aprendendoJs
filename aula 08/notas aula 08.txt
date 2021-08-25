@@ -14,3 +14,9 @@ operadores ternários (?:)
 		var x = 18 == 20 ? 'pode crer' : 'ki mintira'
 		x receberá 'pode crer' caso 18 == 20 seja true (spoiler, não é), ou 'ki mintira' caso 18 == 20 seja false
 
+operadores de igualdade
+	== observa igualdade de valores independente de tipo.
+		ex.: 5 == '5' é verdadeiro
+	=== observa igualdade de valores e tipos
+		ex.: 5 ==='5' é falso, pois 5 é um número e '5' é uma string
+

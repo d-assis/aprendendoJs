@@ -1,6 +1,6 @@
 notas aula 07
 
-atalhos para incremento ou decremento
+- atalhos para incremento ou decremento
 	note que para qualquer uma das expressões abaixo, o valor da variável é alterado, não se trata de uma
 	 operação aritimética apenas, estamos atribuindo novo valor às variáveis
 
@@ -12,3 +12,8 @@ atalhos
 	x++
 	y -= 1
 	y--
+
+- Apesar de não ter sido aprofundado durante a aula, a expressão "typeof" se trata também de um operador
+
+- o operador % se refere ao resto da divisão entre o primeiro e segundo termos. por exemplo:
+	o resultado de (5 % 2) é 1
