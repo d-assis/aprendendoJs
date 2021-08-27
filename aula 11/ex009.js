@@ -5,8 +5,8 @@ var pais = 'França'
 console.log(`Vivendo em ${pais}`)
 
 if(pais == 'Brasil'){
-    console.log('Brasileiro')
+    console.log('Você é Brasileiro')
 }
 else{
-    console.log('Estrangeiro')
+    console.log('Você é Estrangeiro')
 }
