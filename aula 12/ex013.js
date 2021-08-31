@@ -1,6 +1,11 @@
+// "agora" recebe o retorno de Date() tornando-se um objeto
 var agora = new Date()
+
+// sendo um objeto podemos navegar por seus métodos públicos, no caso, estamos interessados em getDay()
+// o retorno de getDay() é armazenado na variável diaSem
 var diaSem = agora.getDay()
 
+// o comando break é obrigatório para a utilização da estrutura switchcase
 switch (diaSem){
     case 0:
         console.log('hoje é domingo')
