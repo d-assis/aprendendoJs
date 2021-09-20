@@ -8,9 +8,14 @@ function contar(){
     console.log(fim)
     console.log(passo)
 
+    cont.innerHTML = 'Contando: '
+
     let i = ini
     while( i <= fim ){
-        cont.innerHTML = `${i} >`
+        let ctg = document.createElement('strong')
+        ctg.setAttribute('id',`ctg${i}`)
+        ctg.innerHTML = `${i} &#x1F449;`
+        cont.appendChild(ctg)
         i = i + passo
     }
 }
