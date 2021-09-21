@@ -10,12 +10,22 @@ function contar(){
 
     cont.innerHTML = 'Contando: '
 
-    let i = ini
-    while( i <= fim ){
-        let ctg = document.createElement('strong')
-        ctg.setAttribute('id',`ctg${i}`)
-        ctg.innerHTML = `${i} &#x1F449;`
-        cont.appendChild(ctg)
-        i = i + passo
+    if(ini >= fim){
+        cont.innerHTML = "Fim precisa ser maior que início. Tente novamente com outros valores."
+    }else if(passo <= 0){
+        cont.innerHTML = "Passo precisa ser maior que 0. Tente novamente com outros valores."
+    }else{
+        let i = ini
+        while( i <= fim ){
+            let ctg = document.createElement('strong')
+            ctg.setAttribute('id',`ctg${i}`)
+            ctg.innerHTML = `${i} &#x1F449;`
+            cont.appendChild(ctg)
+            i = i + passo
+            
+        }
+        
     }
+
+    
 }
