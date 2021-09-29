@@ -1,9 +1,15 @@
 function contar(){
     // Associando os nós html às respectivas variáveis
-    let ini = Number(document.querySelector('#inicio').value)
-    let fim = Number(document.querySelector('#fim').value) 
-    let passo = Number(document.querySelector('#passo').value)
-    let cont = document.querySelector('#cont')
+    let ini = document.querySelector('#txti')
+    let fim = document.querySelector('#txtf') 
+    let passo = document.querySelector('#txtp')
+
+    //validação de preenchimento
+    if(ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0){
+        window.alert('[ERRO] Faltam dados!')
+    }
+
+    let cont = document.querySelector('#res')
 
     //trocando mensagem de contexto
     cont.innerHTML = 'Contando: <br>'
