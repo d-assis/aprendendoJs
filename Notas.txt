@@ -124,3 +124,8 @@ Módulo E
 			do while (teste no final)
 			for (expressão condensada)
 Módulo F
+	aula 15
+		vetores
+			Array ou vetor referem-se a um tipo de variável chamado de "variável composta". Vetores são compostos de vários elementos, que por sua vez, possuem um valor e chave de identificação próprios.
+			Ex.: let f = [banana, mamao, melancia]
+			no exemplo, o vetor f é composto de 3 elementos sendo eles f[0], f[1] e f[2], cada um contendo um valor diferente.
