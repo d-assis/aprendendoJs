@@ -1,4 +1,11 @@
-let num = [10,15,35,180]
+let num = [1,15,35,180]
+
+// caso sort seja chamado sem um parâmetro, os itens serão organizados em ordem alfabética crescente, o que não funciona para valores numéricos, conforme o exemplo abaixo
+num.sort()
+console.log(num)
+
+//para ordenar valores numéricos de um vetor, é necessário criar uma função de ordenação conforme o exemplo abaixo onde temos a função de ordem crescente
+num.sort(function(a,b){return a - b})
 
 console.log(`nosso vetor é o ${num}`)
 
@@ -18,5 +25,29 @@ console.log(num)
 console.log("o comprimento so vetor num é " +num.length)
 
 // o método sort, quando aplicado a um vetor, organiza os valores contidos em ordem crescente.
-num.sort()
+num.sort(function(a,b){return a - b})
 console.log(num)
+
+// exibir vetor usando estrutura de repetição
+for(let pos = 0; pos < num.length; pos ++){
+    console.log(`A ${pos+1}ª posição tem o valor ${num[pos]}`)
+}
+
+//exibindo vetor usando repetição simplificada, também chamada de percurso
+for(let p in num){
+    console.log(`A ${p+1}ª posição tem o valor ${num[p]}`)
+}
+
+
+// DÚVIDAS
+/*
+    1)pq isso não funciona?
+    function sortFn(a,b){return a - b}
+
+    num.sort(sortFn())
+    ________
+
+    2)pq 'p' é considerado string?
+    for(let p in num){
+    console.log(`A ${p+1}ª posição tem o valor ${num[p]}`)}
+*/
