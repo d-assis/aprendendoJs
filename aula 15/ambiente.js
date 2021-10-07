@@ -38,6 +38,12 @@ for(let p in num){
     console.log(`A ${p+1}ª posição tem o valor ${num[p]}`)
 }
 
+// método de busca de valores dentro do vetor, retorna a posição do valor passado no parâmetro
+console.log(num.indexOf(7))
+
+// caso o valor passado não exista no vetor, o retorno deverá ser -1 conforme o exemplo abaixo
+console.log(num.indexOf(23))
+
 
 // DÚVIDAS
 /*
