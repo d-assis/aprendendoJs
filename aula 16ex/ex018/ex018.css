@@ -22,3 +22,7 @@ footer{
     font-style: italic;
     text-align: center;
 }
+
+#tab{
+    width: 150px;
+}

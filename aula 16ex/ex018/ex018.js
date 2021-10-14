@@ -5,8 +5,27 @@ let t = document.querySelector('#tab')
 let r = document.querySelector('#res')
 let v = []
 
+function isNum(n){
+    let isn = true
+    if(typeof(n) != 'number'){
+        isn = false
+    }
+    return isn
+}
+
+function listed(n, l){
+    let li = false
+    for(let i = 0; i <= l.length; i++){
+        if(l[i] == n){
+            li = true
+        }
+    }
+}
+
 function coletar(){
     let n = Number(num.value)
+    if(isNum() == false ){}
+    
     if(n < 1 || n > 100){
         window.alert('valor inválido, insira um número dentro da faixa especificada e tente novamente')
         console.log(n)
@@ -21,22 +40,40 @@ function coletar(){
 
 // soma os valores adicionados ao vetor
 function somar(){
-    
+    let sm = 0
+    for(let i = 0; i <= v.length; i++){       
+        sm = sm + v[i]
+        console.log(typeof(v[i]))
+    }
+    return sm
 }
 
 // calcula a média dos valores adicionados
 function media(){
-
+    let med = somar()/v.length
+    return med
 }
 
 // compara e retorna o maior valor do vetor
 function maior(){
-
+    let mai = 0
+    for(let i = 0; i <= v.length; i++){
+        if(v[i] > mai){
+            mai = v[i]
+        }
+    }
+    return mai
 }
 
 // compara e retorna o menor valor do vetor
 function menor(){
-
+    let men = v[0]
+    for(let i = 0; i <= v.length; i++){
+        if(men > v[i]){
+            men = v[i]
+        }
+    }
+    return men
 }
 
 // exibe analises na tela
@@ -53,13 +90,13 @@ function analisar(){
             
             // exibir maior número adicionado
             case 1:
-                info.innerHTML = `O maior valor informado foi ${v}`
+                info.innerHTML = `O maior valor informado foi ${maior()}`
                 r.appendChild(info)
             break;
             
             // exibir menor número adicionado
             case 2:
-                info.innerHTML = `O menor valor informado foi ${v}`
+                info.innerHTML = `O menor valor informado foi ${menor()}`
                 r.appendChild(info)
             break;
             
