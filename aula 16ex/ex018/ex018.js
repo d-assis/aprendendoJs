@@ -27,14 +27,24 @@ function listed(n, l){
     return li
 }
 
+// registra números inseridos no vetor v[] e exibe mensagem correspondente na tela
 function coletar(){
     let n = Number(num.value)
+    
+    //estrutura condicional aninahada para bloqueio de inputs inesperados
+    // bloqueio caso o input seja diferente de número ou já tenha sido adicionado ao vetor
     if(isNum(n) == false || listed(n,v) == true){
         window.alert('valor inválido ou já encontrado na lista')
-    } else if(n < 1 || n > 100){
+    } 
+    // bloqueio caso o valor seja menor que 1 ou maior que 100
+    else if(n < 1 || n > 100){
         window.alert('valor inválido, insira um número dentro da faixa especificada e tente novamente')
     }else{
+
+        // insere valor n na última posição do vetor v
         v.push(n)
+
+        // criação de novo nó HTML contendo a mensagem referente a adição de número ao vetor
         let item = document.createElement('option')
         item.innerHTML = `valor ${n} adicionado`
         t.appendChild(item)
