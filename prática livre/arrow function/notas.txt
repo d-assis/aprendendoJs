@@ -1,0 +1,3 @@
+Arrow functions
+    Definição
+        Trata-se de uma nova forma de declarar funções anônimas, própria do ES6 (ecma script 6), onde alguns dos componentes chave da declaração de função passam a ser opcionais, resultando em mais facilidade ao escrever códigos.
