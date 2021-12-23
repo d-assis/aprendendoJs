@@ -1,9 +1,5 @@
-function ex1 (x){
-    return x + 2
-}
+function soma(n1,n2){
+    return n1 + n2
+};
 
-let arrowEx1 = (x) => x + 2
-
-console.log(ex1(5))
-
-console.log(arrowEx1(5))
+console.log(`A soma é: ${soma(2,2)}`);

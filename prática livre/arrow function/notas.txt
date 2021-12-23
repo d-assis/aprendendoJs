@@ -1,3 +1,36 @@
 Arrow functions
     Definição
-        Trata-se de uma nova forma de declarar funções anônimas, própria do ES6 (ecma script 6), onde alguns dos componentes chave da declaração de função passam a ser opcionais, resultando em mais facilidade ao escrever códigos.
+        Trata-se de uma nova forma de declarar funções anônimas, própria do ES6 (ecma script 6), onde alguns dos componentes chave da declaração de função passam a ser opcionais, resultando em mais facilidade ao escrever códigos, além de uma escrita mais limpa e econômica.
+
+    Exemplos
+        função padrão (exemplo1.js)
+            possui todos os componentes chave da declaração:
+            - palavra reservada "function"
+            - identificador
+            - argumentos entre parênteses
+            - chaves para delimitar o bloco de códigos
+            - palavra reservada "return"
+
+        arrow function básica (exemplo2.js)
+            substitui a palavra chave "function" pela seta => mas mantém todos os outros componentes
+            - nomeada através de atribuição de variável, arrow functions por si só são sempre anônimas
+            - argumentos entre parênteses
+            - sinal "=>" ou "seta gorda" entre argumentos e bloco de código
+            - chaves para delimitar o bloco de códigos
+            - palavra reservada "return"
+
+        arrow function sem "return" (exemplo3.js)
+            suprime a palavra reservada "return" assim como as chaves delimitadoras do bloco de código.
+            Só funciona com funções que contenham uma única linha de código.
+            - nomeada através de atribuição de variável, arrow functions por si só são sempre anônimas
+            - argumentos entre parênteses
+            - sinal "=>" ou "seta gorda" entre argumentos e bloco de código
+
+        arrow function sem parâmetros (exemplo4.js)
+            Apresenta parênteses vazios antes da seta e estes também podem ser substituídos por "_" .
+            As variações referentes a palavra reservada "return" e as chaves delimitadoras de código ainda podem ser utilizadas, gerando variações dentro desta variação (vide exemplo).
+
+        arrow function com parâmetro único (exemplo5.js)
+            Para funções anônimas de parâmetro único, a utilização dos parênteses é opcional (vide exemplos).
+
+        arrow function com múltiplos parâmetros (exemplo6.js)
