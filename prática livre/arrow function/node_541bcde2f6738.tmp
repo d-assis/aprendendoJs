@@ -1,0 +1,13 @@
+(() => {
+    function Person () {
+        this.year = 0;
+
+        setInterval(function(){
+            this.year = this.year + 1;
+            console.log("Qual a referência do this? ", this)
+            console.log("Idade: ", this.year)
+        }, 2000)
+    }
+
+    const p1 = new Person()
+})()

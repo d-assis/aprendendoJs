@@ -22,6 +22,7 @@ Arrow functions
         arrow function sem "return" (exemplo3.js)
             suprime a palavra reservada "return" assim como as chaves delimitadoras do bloco de código.
             Só funciona com funções que contenham uma única linha de código.
+            Note que ao omitir a palavra "return", o sistema espera um bloco de código sem as chaves delimitadoras, desse modo, sempre que suprimir "return" não use chaves.
             - nomeada através de atribuição de variável, arrow functions por si só são sempre anônimas
             - argumentos entre parênteses
             - sinal "=>" ou "seta gorda" entre argumentos e bloco de código
@@ -34,3 +35,17 @@ Arrow functions
             Para funções anônimas de parâmetro único, a utilização dos parênteses é opcional (vide exemplos).
 
         arrow function com múltiplos parâmetros (exemplo6.js)
+            para o caso de funções com mais de 1 parâmetro, o uso de parênteses é obrigatório, contudo, ainda é possível omitir chaves e a palavra reservada "return" para o caso de linha única no bloco de código.
+
+        arrow function retornando objeto JSON (exemplo7.js)
+            para retornar um objeto omitindo a palavra reservada "return", é necessário o uso de parênteses que contenham o objeto.
+
+        arrow function e IIFE (exemplo8.js)
+            IIFEs ou immediately invoked function expression, se refere a um design pattern que possibilita a definição e execução imediata de uma função, com o objetivo de isolar seu conteúdo do escopo global.
+            É possível utilizar as IIFEs na forma de arrow functions. Ao utilizar esse recurso, fique atento a estrutura mostrada no exemplo.
+
+        this no contexto da arrow function (exemplo9.js)
+
+        
+
+        
