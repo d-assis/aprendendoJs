@@ -1,0 +1,21 @@
+Objetos em Js
+    Definição
+        objetos são tipos de dados de referência, que assim como vetores e funções, podem conter outros dados de tipos primordiais.
+
+    Criando um objeto (exemplo1.js)
+        objetos podem ser declarados como variáveis que recebem chaves e valores contidos entre {}, vide exemplo.
+        Para definir propriedades utiliza-se o padrão de "chave: valor", onde declaramos o nome da propriedade seguido de : e o valor da mesma após esse sinal. Cada conjunto de chave:valor deve ser separado por vírgula no objeto.
+
+    Possibilidades na criação de objetos (exemplo2.js)
+        As propriedades de um objeto podem conter uma variedade de tipos de dados, entre eles: vetores, funções e outros objetos.
+
+        vetores
+            para declarar vetores dentro de uma propriedade, basta adicionar uma sequência de valores separados por vírgula contidos entre []. Vide exemplo
+
+        funções
+            
+        propriedades e variáveis
+            ao declarar uma propriedade que contém o valor de uma variável de mesmo nome, é possível suprimir o formato chave:valor, inserindo apenas o nome da variável em questão no lugar da propriedade.
+
+    união ou "merge" de objetos (exemplo3.js)
+        É possível unir as propriedades e métodos de dois ou mais objetos em um objeto único através do método Object.assign({}), vide exemplo.
