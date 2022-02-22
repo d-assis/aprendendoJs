@@ -1,0 +1,4 @@
+dúvidas
+1. o que significa a sintaxe: 
+    elemento({propriedade: "valor"})
+no contexto do programa duvida1.js?

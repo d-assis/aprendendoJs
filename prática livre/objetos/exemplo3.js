@@ -13,8 +13,6 @@ let cardInfo = {
     tipo:"mágica instantânea"
 };
 
-//conjurar("kozilek")
-
 // o método Object.assign() recebe dois ou mais objetos como parâmetros sendo que o primeiro receberá as 
 //propriedades e métodos do segundo em diante.
 // uma boa prática é sempre usar um objeto vazio como primeiro parâmetro e ao mesmo tempo atribuir o 
