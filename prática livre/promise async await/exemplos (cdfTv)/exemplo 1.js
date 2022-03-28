@@ -37,7 +37,8 @@ p = new Promise((resolve,reject) => {
     }
 })
 
-// invocamos os métodos internos then() e catch() da promise para trabalhar com os valores de retorno da mesma, seja ela resolvida, e trabalhada com then(), ou rejeitada, e tratada com catch()
+// invocamos os métodos internos then() e catch() da promise para trabalhar com os valores 
+//de retorno da mesma, seja ela resolvida, e trabalhada com then(), ou rejeitada, e tratada com catch()
 p.then((message) => {
     console.log(`resultado da promise resolvida e trabalhada com .then(): ${message}`)
 }).catch((message) => {
