@@ -1,0 +1,24 @@
+{
+  "name": "aprendendojs",
+  "version": "1.0.0",
+  "description": "pacote de experimentos e exercícios em Js",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d-assis/aprendendoJs.git"
+  },
+  "keywords": [
+    "aprendendo",
+    "Js",
+    "javascript"
+  ],
+  "author": "Gabriel de Assis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/d-assis/aprendendoJs/issues"
+  },
+  "homepage": "https://github.com/d-assis/aprendendoJs#readme"
+}

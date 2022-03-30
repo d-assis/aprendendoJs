@@ -24,7 +24,8 @@
 
 // programa em formato assíncrono
 
-//uma promise é um objeto que aceita uma função executora anônima como parâmetro, e essa, por sua vez, aceita as funções nativas "resolve" e "reject" 
+// uma promise é um objeto que aceita uma função executora anônima como parâmetro, 
+//e essa, por sua vez, aceita as funções nativas "resolve" e "reject" 
 p = new Promise((resolve,reject) => {
     let a = 1 + 1
     if(a == 2){
